@@ -1,0 +1,32 @@
+{
+  "name": "gps-tracker",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:api": "turbo run dev --filter=@gps-tracker/api",
+    "dev:web": "turbo run dev --filter=@gps-tracker/web",
+    "dev:mobile": "adb reverse tcp:3000 tcp:3000 >/dev/null 2>&1 || true && pnpm --filter @gps-tracker/mobile run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:migrate": "pnpm --filter @gps-tracker/api run db:migrate",
+    "db:seed": "pnpm --filter @gps-tracker/api run db:seed",
+    "db:generate": "pnpm --filter @gps-tracker/api run db:generate",
+    "android": "pnpm --filter @gps-tracker/mobile run android",
+    "ios": "pnpm --filter @gps-tracker/mobile run ios"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "turbo": "^2.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@sinclair/typebox": "0.34.49",
+      "exact-mirror": "0.2.7",
+      "@types/react": "18.3.12",
+      "@types/react-dom": "18.3.1"
+    }
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,25 @@
+gps-tracker-plano.md
+node_modules
+dist
+.turbo
+.env
+.env.local
+.cursor/
+.vscode/
+*.log
+.DS_Store
+
+# Expo / mobile local artifacts
+apps/mobile/.expo/
+apps/mobile/expo-env.d.ts
+
+# Cursor local project artifacts
+agent-transcripts/
+terminals/
+.gradle/
+**/.gradle/
+**/build/
+!**/build.gradle
+!**/build.gradle.kts
+!**/buildSrc/
+.expo/

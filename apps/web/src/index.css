@@ -1,0 +1,46 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --brand-primary: #cc8c1c;
+  --brand-primary-dark: #b2721c;
+  --brand-secondary: #352d57;
+  --brand-accent: #6980a4;
+  --layout-sidebar-bg: #201a1b;
+  --layout-body: #f0eff0;
+  --layout-border: #d8c1bd;
+  --text-main: #201a1b;
+  --feedback-success: #679aa4;
+  --feedback-error: #b4845c;
+}
+
+@layer base {
+  body {
+    @apply bg-layout-body text-text-main antialiased;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #e8e4e6;
+}
+
+.tracking-popup .leaflet-popup-content-wrapper {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.tracking-popup .leaflet-popup-content {
+  margin: 0;
+}
+
+.tracking-popup .leaflet-popup-tip-container {
+  display: none;
+}

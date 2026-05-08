@@ -1,0 +1,13 @@
+{
+  "name": "@gps-tracker/types",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "echo \"types package - no build step\"",
+    "lint": "echo \"skip\"",
+    "typecheck": "echo \"skip\"",
+    "dev": "node -e \"setInterval(()=>{},1<<30)\""
+  }
+}
