@@ -10,7 +10,6 @@ ENV VITE_API_URL=$VITE_API_URL
 ENV VITE_WS_URL=$VITE_WS_URL
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json ./
-COPY patches ./patches
 COPY apps/api/package.json ./apps/api/package.json
 COPY apps/web/package.json ./apps/web/package.json
 
